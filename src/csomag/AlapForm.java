@@ -25,21 +25,148 @@ public class AlapForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblvilag = new javax.swing.JLabel();
+        txtfNev = new javax.swing.JTextField();
+        txtfEletkor = new javax.swing.JTextField();
+        btnOlvas = new javax.swing.JButton();
+        btnSzamol = new javax.swing.JButton();
+        txtfKiir = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtaSzoveg = new javax.swing.JTextArea();
+        btnAppend = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
+
+        lblvilag.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblvilag.setText("hello");
+        lblvilag.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+
+        txtfNev.setText("nev");
+
+        txtfEletkor.setText("eletkor");
+
+        btnOlvas.setText("Olvas");
+        btnOlvas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOlvasActionPerformed(evt);
+            }
+        });
+
+        btnSzamol.setText("szamol");
+        btnSzamol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSzamolActionPerformed(evt);
+            }
+        });
+
+        txtaSzoveg.setColumns(20);
+        txtaSzoveg.setRows(5);
+        jScrollPane1.setViewportView(txtaSzoveg);
+
+        btnAppend.setText("append");
+        btnAppend.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAppendActionPerformed(evt);
+            }
+        });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(lblvilag, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtfEletkor, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSzamol))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtfNev, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnOlvas))
+                            .addComponent(txtfKiir)
+                            .addComponent(jScrollPane1))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnAppend))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(lblvilag, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtfNev, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnOlvas))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtfEletkor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(btnSzamol)))
+                .addGap(15, 15, 15)
+                .addComponent(txtfKiir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAppend))
+                .addGap(27, 27, 27))
         );
+
+        lblvilag.getAccessibleContext().setAccessibleName("valami");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnOlvasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOlvasActionPerformed
+        // TODO add your handling code here:
+        String nev = txtfNev.getText();
+        txtfKiir.setText("Udvozollek "+nev);
+       
+    }//GEN-LAST:event_btnOlvasActionPerformed
+
+    private void btnSzamolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSzamolActionPerformed
+        // TODO add your handling code here:
+        
+        int szam = Integer.parseInt(txtfEletkor.getText());
+        txtfKiir.setText(szam+" eves");
+        
+    }//GEN-LAST:event_btnSzamolActionPerformed
+
+    private void btnAppendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppendActionPerformed
+        // TODO add your handling code here:
+        
+        txtaSzoveg.append("hozzafuz ");
+    }//GEN-LAST:event_btnAppendActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        
+        txtfKiir.setText("megnyilt");
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -77,5 +204,15 @@ public class AlapForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAppend;
+    private javax.swing.JButton btnOlvas;
+    private javax.swing.JButton btnSzamol;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblvilag;
+    private javax.swing.JTextArea txtaSzoveg;
+    private javax.swing.JTextField txtfEletkor;
+    private javax.swing.JTextField txtfKiir;
+    private javax.swing.JTextField txtfNev;
     // End of variables declaration//GEN-END:variables
 }
